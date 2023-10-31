@@ -83,6 +83,13 @@ app.delete("/books/:id", async (req, res) => {
   }
 });
 
+app.get("/", (req,res)=>{
+  res.status(200).json({
+    success: true,
+    message:"Api is working"
+  });
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
